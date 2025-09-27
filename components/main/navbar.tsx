@@ -14,7 +14,7 @@ export const Navbar = () => {
       <div className="w-full h-full flex items-center justify-between m-auto ">
         {/* Logo + Name */}
         <Link
-          href="#about-me"
+          href="/#about-me"
           className="flex items-center"
         >
           <Image
@@ -48,7 +48,7 @@ export const Navbar = () => {
               rel="noreferrer noopener"
               className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
             >
-              Source Code
+              GitHub
             </Link>
           </div>
         </div>

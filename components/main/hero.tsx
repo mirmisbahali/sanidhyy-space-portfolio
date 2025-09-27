@@ -2,7 +2,7 @@ import { HeroComponentTest } from "@/components/sub/hero-component_test";
 
 export const Hero = () => {
   return (
-    <div className="relative flex flex-col min-h-screen w-full overflow-hidden">
+    <div data-section="hero" className="relative flex flex-col min-h-screen w-full overflow-hidden">
       {/* <video
         autoPlay
         muted

@@ -33,13 +33,14 @@ export const RoverTechnologySection = () => {
   const [activeFeature, setActiveFeature] = useState("suspension");
 
   return (
-    <div className="relative min-h-screen w-full">
+    <div data-section="rover-tech" className="relative min-h-screen w-full">
       <div className="px-4 sm:px-8 md:px-12 lg:px-8 xl:px-12 py-16 lg:py-24">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           className="text-center mb-16"
         >
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
@@ -56,8 +57,9 @@ export const RoverTechnologySection = () => {
           {/* Controls Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
           >
             {/* Feature Buttons */}
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-1 gap-4 mb-8">
@@ -71,8 +73,9 @@ export const RoverTechnologySection = () => {
                       : "border-gray-700 bg-gray-900/50 text-gray-300 hover:border-purple-400 hover:bg-purple-500/10"
                   }`}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                   whileHover={{
                     scale: 1.02,
                     boxShadow: activeFeature === feature.id
@@ -114,28 +117,6 @@ export const RoverTechnologySection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Mobile 3D Model - Only show on mobile since desktop uses sticky model from hero */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="lg:hidden flex items-center justify-center mt-12"
-          >
-            <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]">
-              <Canvas camera={{ position: [0, 0, 1300], fov: 45 }}>
-                <OrbitControls
-                  enableZoom={false}
-                  autoRotate={true}
-                  autoRotateSpeed={0.5}
-                  enablePan={false}
-                />
-                <ambientLight intensity={3} />
-                <directionalLight position={[0, 0, 1300]} intensity={2} />
-                {/* Same model as hero for consistency */}
-                <Model />
-              </Canvas>
-            </div>
-          </motion.div>
         </div>
       </div>
     </div>

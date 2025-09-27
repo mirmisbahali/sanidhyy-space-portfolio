@@ -4,7 +4,11 @@ import { Projects } from "@/components/main/projects";
 import { Skills } from "@/components/main/skills";
 import { RoverTechnologySection } from "@/components/main/rover-technology";
 import { PastAchievements } from "@/components/main/past-achievements";
+import { Sponsors } from "@/components/main/sponsors";
+import { Gallery } from "@/components/main/gallery";
+import { LogoSection } from "@/components/main/logo-section";
 import { Fixed3DModel } from "@/components/sub/fixed-3d-model";
+import { Mobile3DModel } from "@/components/sub/mobile-3d-model";
 
 export default function Home() {
   return (
@@ -18,12 +22,17 @@ export default function Home() {
         <div className="lg:w-1/2 w-full">
           <Hero />
           <RoverTechnologySection />
+
+          {/* Mobile 3D Model - appears below text content */}
+          <Mobile3DModel />
         </div>
       </div>
 
       {/* Normal Full-Width Sections */}
       <div className="w-full">
         <PastAchievements />
+        <Sponsors />
+        <Gallery />
         {/* <Skills /> */}
         {/* <Encryption /> */}
         {/* <Projects /> */}

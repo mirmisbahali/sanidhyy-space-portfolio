@@ -1,9 +1,8 @@
-import { FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import {
   RxDiscordLogo,
   RxGithubLogo,
   RxInstagramLogo,
-  RxTwitterLogo,
   RxLinkedinLogo,
 } from "react-icons/rx";
 
@@ -95,14 +94,9 @@ export const SOCIALS = [
     link: "https://instagram.com",
   },
   {
-    name: "Facebook",
-    icon: FaFacebook,
-    link: "https://facebook.com",
-  },
-  {
-    name: "Twitter",
-    icon: RxTwitterLogo,
-    link: "https://twitter.com",
+    name: "LinkedIn",
+    icon: RxLinkedinLogo,
+    link: "https://linkedin.com",
   },
 ] as const;
 
@@ -336,7 +330,7 @@ export const FOOTER_DATA = [
         link: "about-project",
       },
       {
-        name: "Contact Me",
+        name: "Contact Us",
         icon: null,
         link: "/contact",
       },
@@ -346,19 +340,19 @@ export const FOOTER_DATA = [
 
 export const NAV_LINKS = [
   {
-    title: "About me",
-    link: "#about-me",
+    title: "Goals",
+    link: "/#past-achievements",
   },
   {
-    title: "Skills",
-    link: "#skills",
+    title: "Gallery",
+    link: "/#gallery",
   },
   {
-    title: "Projects",
-    link: "#projects",
+    title: "Sponsor",
+    link: "/sponsor",
   },
 ] as const;
 
 export const LINKS = {
-  sourceCode: "https://github.com/sanidhyy/space-portfolio",
+  sourceCode: "https://github.com/deakin_rover",
 };

@@ -71,26 +71,6 @@ export const HeroComponentTest = () => {
           </motion.div>
         </motion.div>
 
-        {/* Mobile 3D Model - Only show on mobile */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="lg:hidden flex items-center justify-center mt-12"
-        >
-          <div className="w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] max-w-[90vw] max-h-[90vw]">
-            <Canvas camera={{ position: [0, 0, 1300], fov: 45 }}>
-              <OrbitControls
-                enableZoom={false}
-                autoRotate={true}
-                autoRotateSpeed={0.5}
-              />
-              <ambientLight intensity={3} />
-              <directionalLight position={[0, 0, 1300]} intensity={2} />
-              <Model />
-            </Canvas>
-          </div>
-        </motion.div>
       </div>
     </div>
   );

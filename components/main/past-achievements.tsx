@@ -6,32 +6,40 @@ import { TrophyIcon, StarIcon, NewspaperIcon, UsersIcon } from "@heroicons/react
 const achievements = {
   competitions: [
     {
-      year: "2025",
+      year: "2026",
       event: "Critical Design Review",
-      // rank: "3rd Place",
-      score: "85/100",
-      description: "Exceptional performance in navigation and sample collection tasks"
+      score: "20",
+      description: "Submit comprehensive technical documentation and rover design plans"
     },
     {
-      year: "2025",
+      year: "2026",
       event: "Systems Acceptance Review",
-      // rank: "5th Place",
-      score: "78/100",
-      description: "Strong showing in autonomous operations and equipment deployment"
+      score: "50",
+      description: "Demonstrate rover navigation and equipment system capabilities"
     },
     {
-      year: "2025",
-      event: "Post-Landing Task",
-      // rank: "8th Place",
-      score: "71/100",
-      description: "First-time participation with solid foundational performance"
+      year: "2026",
+      event: "Post-Landing",
+      score: "80",
+      description: "Execute complex multi-stage rover operations autonomously"
     },
     {
-      year: "2025",
-      event: "Space Resources Task",
-      // rank: "8th Place",
-      score: "71/100",
-      description: "First-time participation with solid foundational performance"
+      year: "2026",
+      event: "Space Resources",
+      score: "25",
+      description: "Locate and collect space resource samples efficiently"
+    },
+    {
+      year: "2026",
+      event: "Excavation and Construction",
+      score: "70",
+      description: "Perform excavation tasks and basic construction operations"
+    },
+    {
+      year: "2026",
+      event: "Mapping and Autonomous",
+      score: "70",
+      description: "Create detailed terrain maps and navigate autonomously"
     }
   ],
   // awards: [
@@ -100,59 +108,74 @@ const achievements = {
 
 export const PastAchievements = () => {
   return (
-    <div className="relative w-full bg-gradient-to-b from-gray-900 to-black py-20 lg:py-32">
+    <div data-section="past-achievements" id="past-achievements" className="relative w-full bg-gradient-to-b from-gray-900/70 to-black/70 py-20 lg:py-25 z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           className="text-center mb-16 lg:mb-24"
         >
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-6">
-            Past <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">Achievements</span>
+            2026 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">Goals</span>
           </h2>
-          <p className="text-gray-400 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            Building trust through a proven track record of excellence in rover development,
-            competition success, and community impact.
+          <p className="text-gray-400 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed mb-4">
+            Our 25+ student team will spend 6 months developing systems to achieve 315+ points across all competition tasks.
           </p>
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 text-center">
+            <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg px-4 py-2">
+              <div className="text-2xl font-bold text-purple-400">315+</div>
+              <div className="text-sm text-gray-300">Total Points</div>
+            </div>
+            <div className="bg-green-500/10 border border-green-500/30 rounded-lg px-4 py-2">
+              <div className="text-2xl font-bold text-green-400">25+</div>
+              <div className="text-sm text-gray-300">Students</div>
+            </div>
+            <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-lg px-4 py-2">
+              <div className="text-2xl font-bold text-cyan-400">6</div>
+              <div className="text-sm text-gray-300">Months</div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Competition Results */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
           className="mb-20"
         >
           <div className="flex items-center mb-8">
             <TrophyIcon className="h-8 w-8 text-yellow-500 mr-4" />
-            <h3 className="font-heading text-2xl lg:text-3xl text-white">Competition Results</h3>
+            <h3 className="font-heading text-2xl lg:text-3xl text-white">Competition Tasks</h3>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {achievements.competitions.map((comp, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300"
+                viewport={{ once: true }}
+                className="flex flex-col justify-between bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300"
               >
-                <div className="flex justify-between items-start mb-4">
+                <div>
+                <div className="mb-4">
                   <span className="text-2xl font-bold text-purple-400">{comp.year}</span>
-                  {/* <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">
-                    {comp.rank}
-                  </span> */}
                 </div>
                 <h4 className="font-heading text-lg text-white mb-2">{comp.event}</h4>
-                <p className="text-gray-400 text-sm mb-3">{comp.description}</p>
-                <div className="text-cyan-400 font-semibold">Score: {comp.score}</div>
+                <p className="text-gray-400 text-sm mb-3 leading-relaxed">{comp.description}</p>
+                </div>
+                <div className="text-cyan-400 font-semibold">{comp.score} pts</div>
               </motion.div>
             ))}
           </div>
         </motion.div>
-        {/* 
+        {/*
         Awards & Recognition
         <motion.div
           initial={{ opacity: 0, y: 50 }}
