@@ -4,6 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --font-heading: var(--font-bruno-ace-sc);
+    --font-body: var(--font-montserrat);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-bruno-ace-sc);
+  }
+}
+
+
+.font-heading {
+  font-family: var(--font-bruno-ace-sc);
+}
+
 .cursive {
   font-family: "Cedarville Cursive", cursive;
 }

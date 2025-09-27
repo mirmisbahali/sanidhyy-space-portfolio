@@ -285,21 +285,21 @@ export const FOOTER_DATA = [
   {
     title: "Community",
     data: [
-      {
-        name: "YouTube",
-        icon: FaYoutube,
-        link: "https://youtube.com",
-      },
+      // {
+      //   name: "YouTube",
+      //   icon: FaYoutube,
+      //   link: "https://youtube.com",
+      // },
       {
         name: "GitHub",
         icon: RxGithubLogo,
         link: "https://github.com",
       },
-      {
-        name: "Discord",
-        icon: RxDiscordLogo,
-        link: "https://discord.com",
-      },
+      // {
+      //   name: "Discord",
+      //   icon: RxDiscordLogo,
+      //   link: "https://discord.com",
+      // },
     ],
   },
   {
@@ -310,11 +310,11 @@ export const FOOTER_DATA = [
         icon: RxInstagramLogo,
         link: "https://instagram.com",
       },
-      {
-        name: "Twitter",
-        icon: RxTwitterLogo,
-        link: "https://twitter.com",
-      },
+      // {
+      //   name: "Twitter",
+      //   icon: RxTwitterLogo,
+      //   link: "https://twitter.com",
+      // },
       {
         name: "Linkedin",
         icon: RxLinkedinLogo,
@@ -328,17 +328,17 @@ export const FOOTER_DATA = [
       {
         name: "Become Sponsor",
         icon: null,
-        link: "https://youtube.com",
+        link: "/sponsor",
       },
       {
-        name: "Learning about me",
+        name: "About Project",
         icon: null,
-        link: "https://example.com",
+        link: "about-project",
       },
       {
         name: "Contact Me",
         icon: null,
-        link: "mailto:contact@example.com",
+        link: "/contact",
       },
     ],
   },

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Bruno_Ace_SC, Montserrat } from "next/font/google";
 import type { PropsWithChildren } from "react";
 
 import { Footer } from "@/components/main/footer";
@@ -10,7 +10,19 @@ import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const brunoAceSC = Bruno_Ace_SC({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-bruno-ace-sc"
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-montserrat"
+});
 
 export const viewport: Viewport = {
   themeColor: "#030014",
@@ -24,7 +36,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body
         className={cn(
           "bg-[#030014] overflow-y-scroll overflow-x-hidden",
-          inter.className
+          montserrat.className,
+          brunoAceSC.variable,
+          montserrat.variable
         )}
       >
         <StarsCanvas />

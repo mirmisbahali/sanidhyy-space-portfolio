@@ -6,31 +6,31 @@ export const Footer = () => {
   return (
     <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px]">
       <div className="w-full flex flex-col items-center justify-center m-auto">
-        <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
+        <div className="w-full h-full grid grid-cols-3 gap-4 md:gap-8 max-w-4xl">
           {FOOTER_DATA.map((column) => (
             <div
               key={column.title}
-              className="min-w-[200px] h-auto flex flex-col items-center justify-start"
+              className="h-auto flex flex-col items-center justify-start"
             >
-              <h3 className="font-bold text-[16px]">{column.title}</h3>
+              <h3 className="font-bold text-sm md:text-[2px] lg:text-[16px] mb-4">{column.title}</h3>
               {column.data.map(({ icon: Icon, name, link }) => (
                 <Link
                   key={`${column.title}-${name}`}
                   href={link}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="flex flex-row items-center my-[15px]"
+                  className="flex flex-row items-center my-2 md:my-[15px] hover:text-purple-400 transition-colors"
                 >
-                  {Icon && <Icon />}
-                  <span className="text-[15px] ml-[6px]">{name}</span>
+                  {Icon && <Icon className="text-sm md:text-base" />}
+                  <span className="text-xs md:text-[15px] ml-[6px]">{name}</span>
                 </Link>
               ))}
             </div>
           ))}
         </div>
 
-        <div className="mb-[20px] text-[15px] text-center">
-          &copy; John Doe {new Date().getFullYear()} Inc. All rights reserved.
+        <div className="mt-8 mb-[20px] text-xs md:text-[15px] text-center">
+          Deakin Rover {new Date().getFullYear()} | All rights reserved.
         </div>
       </div>
     </div>
