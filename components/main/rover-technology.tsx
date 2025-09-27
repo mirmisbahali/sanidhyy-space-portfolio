@@ -33,34 +33,8 @@ export const RoverTechnologySection = () => {
   const [activeFeature, setActiveFeature] = useState("suspension");
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Background gradient for seamless space transition */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-purple-900/15 to-blue-900/25 -z-10" />
-
-      {/* Floating particles effect */}
-      <div className="absolute inset-0 -z-5">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-white/30 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0.3, 0.8, 0.3],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 3,
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="container mx-auto px-4 py-16 lg:py-24">
+    <div className="relative min-h-screen w-full">
+      <div className="px-4 sm:px-8 md:px-12 lg:px-8 xl:px-12 py-16 lg:py-24">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -76,15 +50,14 @@ export const RoverTechnologySection = () => {
           </p>
         </motion.div>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        {/* Rover Technology Content */}
+        <div className="w-full max-w-[600px]">
 
-          {/* Left Column - Controls (Mobile: Top) */}
+          {/* Controls Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="order-1 lg:order-1"
           >
             {/* Feature Buttons */}
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-1 gap-4 mb-8">
@@ -141,25 +114,24 @@ export const RoverTechnologySection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - 3D Rover Model (Mobile: Bottom) */}
+          {/* Mobile 3D Model - Only show on mobile since desktop uses sticky model from hero */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="order-2 lg:order-2 flex items-center justify-center"
+            className="lg:hidden flex items-center justify-center mt-12"
           >
-            <div className="w-full max-w-[500px] aspect-square">
-              <Canvas camera={{ position: [0, 0, 1000], fov: 50 }}>
+            <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]">
+              <Canvas camera={{ position: [0, 0, 1300], fov: 45 }}>
                 <OrbitControls
                   enableZoom={false}
                   autoRotate={true}
-                  autoRotateSpeed={0.3}
+                  autoRotateSpeed={0.5}
                   enablePan={false}
                 />
-                <ambientLight intensity={2} />
-                <directionalLight position={[0, 5, 5]} intensity={1.5} />
-                <pointLight position={[-5, 5, 5]} intensity={1} />
-                {/* Temporary Earth model - will be replaced with rover */}
+                <ambientLight intensity={3} />
+                <directionalLight position={[0, 0, 1300]} intensity={2} />
+                {/* Same model as hero for consistency */}
                 <Model />
               </Canvas>
             </div>

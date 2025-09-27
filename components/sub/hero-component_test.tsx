@@ -15,9 +15,9 @@ import { Model } from "@/components/main/3DEarth";
 
 export const HeroComponentTest = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen w-full z-[20] pt-[65px]">
-      {/* Left Column - Text Content */}
-      <div className="flex flex-col justify-center px-20 py-8 lg:py-0">
+    <div className="min-h-screen w-full z-[20] pt-[65px]">
+      {/* Hero Content */}
+      <div className="flex flex-col justify-center px-4 sm:px-8 md:px-12 lg:px-8 xl:px-12 py-8 lg:py-0 min-h-screen">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -70,22 +70,27 @@ export const HeroComponentTest = () => {
             </motion.a>
           </motion.div>
         </motion.div>
-      </div>
 
-      {/* Right Column - 3D Model */}
-      <div className="flex items-center justify-center min-h-[400px] lg:min-h-[600px] py-8 lg:py-12">
-        <div className="w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[400px] lg:h-[400px] xl:w-[480px] xl:h-[480px] max-w-[90vw] max-h-[90vw]">
-          <Canvas camera={{ position: [0, 0, 1300], fov: 45 }}>
-            <OrbitControls
-              enableZoom={false}
-              autoRotate={true}
-              autoRotateSpeed={0.5}
-            />
-            <ambientLight intensity={3} />
-            <directionalLight position={[0, 0, 1300]} intensity={2} />
-            <Model />
-          </Canvas>
-        </div>
+        {/* Mobile 3D Model - Only show on mobile */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="lg:hidden flex items-center justify-center mt-12"
+        >
+          <div className="w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] max-w-[90vw] max-h-[90vw]">
+            <Canvas camera={{ position: [0, 0, 1300], fov: 45 }}>
+              <OrbitControls
+                enableZoom={false}
+                autoRotate={true}
+                autoRotateSpeed={0.5}
+              />
+              <ambientLight intensity={3} />
+              <directionalLight position={[0, 0, 1300]} intensity={2} />
+              <Model />
+            </Canvas>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
