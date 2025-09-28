@@ -135,6 +135,7 @@ export const SponsorContactForm = () => {
                       onChange={(e) => setFormData(prev => ({ ...prev, companyName: e.target.value }))}
                       className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
                       placeholder="Enter your company name"
+                      name="companyName"
                     />
                   </div>
                   <div>
@@ -149,6 +150,7 @@ export const SponsorContactForm = () => {
                       onChange={(e) => setFormData(prev => ({ ...prev, contactName: e.target.value }))}
                       className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
                       placeholder="Your full name"
+                      name="contactName"
                     />
                   </div>
                 </div>
@@ -167,6 +169,7 @@ export const SponsorContactForm = () => {
                       onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
                       className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
                       placeholder="your.email@company.com"
+                      name="email"
                     />
                   </div>
                   <div>
@@ -180,6 +183,7 @@ export const SponsorContactForm = () => {
                       onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
                       className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
                       placeholder="+1 (555) 123-4567"
+                      name="phone"
                     />
                   </div>
                 </div>
@@ -194,6 +198,7 @@ export const SponsorContactForm = () => {
                       value={formData.sponsorshipTier}
                       onChange={(e) => setFormData(prev => ({ ...prev, sponsorshipTier: e.target.value }))}
                       className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                      name="sponsorshipTier"
                     >
                       <option value="">Select a tier</option>
                       {sponsorshipTiers.map(tier => (
@@ -209,6 +214,7 @@ export const SponsorContactForm = () => {
                       value={formData.budgetRange}
                       onChange={(e) => setFormData(prev => ({ ...prev, budgetRange: e.target.value }))}
                       className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                      name="budgetRange"
                     >
                       <option value="">Select budget range</option>
                       {budgetRanges.map(range => (
@@ -227,6 +233,7 @@ export const SponsorContactForm = () => {
                     {interestOptions.map(interest => (
                       <label key={interest} className="flex items-center space-x-3 cursor-pointer">
                         <input
+                          name="interests[]"
                           type="checkbox"
                           checked={formData.interests.includes(interest)}
                           onChange={() => handleInterestChange(interest)}
@@ -244,6 +251,7 @@ export const SponsorContactForm = () => {
                     Additional Information
                   </label>
                   <textarea
+                    name="message"
                     rows={6}
                     value={formData.message}
                     onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
