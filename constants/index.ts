@@ -312,7 +312,7 @@ export const FOOTER_DATA = [
       {
         name: "Linkedin",
         icon: RxLinkedinLogo,
-        link: "linkedin.com/company/deakin-competitive-robotics/",
+        link: "https://linkedin.com/company/deakin-competitive-robotics/",
       },
     ],
   },

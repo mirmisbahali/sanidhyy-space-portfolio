@@ -12,7 +12,7 @@ export const SponsorContactForm = () => {
     phone: '',
     sponsorshipTier: '',
     budgetRange: '',
-    interests: [],
+    interests: [] as string[],
     message: ''
   });
 

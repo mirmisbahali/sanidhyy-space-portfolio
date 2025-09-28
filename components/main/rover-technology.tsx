@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { Model } from "@/components/main/3DEarth"; // Temporary - will replace with rover model
 
 const roverFeatures = [
   {

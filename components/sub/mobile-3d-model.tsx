@@ -14,7 +14,7 @@ export const Mobile3DModel = () => {
         <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]">
           <Canvas shadows dpr={[1, 2]} camera={{ fov: 15, position: [0, 0, 15] }}>
             <Suspense fallback={null}>
-              <Stage controls={ref} preset="rembrandt" intensity={0.5} environment="city">
+              <Stage preset="rembrandt" intensity={0.5} environment="city">
                 false
                 <Model />
                 false

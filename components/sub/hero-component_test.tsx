@@ -2,16 +2,11 @@
 
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 
 import {
-  slideInFromLeft,
-  slideInFromTop,
   zoomIn,
   zoomInFromCenter,
 } from "@/lib/motion";
-import { Model } from "@/components/main/3DEarth";
 
 export const HeroComponentTest = () => {
   return (
