@@ -45,31 +45,31 @@ export const SponsorContactForm = () => {
     'Mentorship opportunities'
   ];
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+  //   // Simulate form submission
+  //   await new Promise(resolve => setTimeout(resolve, 2000));
 
-    setSubmitStatus('success');
-    setIsSubmitting(false);
+  //   setSubmitStatus('success');
+  //   setIsSubmitting(false);
 
-    // Reset form after success
-    setTimeout(() => {
-      setFormData({
-        companyName: '',
-        contactName: '',
-        email: '',
-        phone: '',
-        sponsorshipTier: '',
-        budgetRange: '',
-        interests: [],
-        message: ''
-      });
-      setSubmitStatus('idle');
-    }, 3000);
-  };
+  //   // Reset form after success
+  //   setTimeout(() => {
+  //     setFormData({
+  //       companyName: '',
+  //       contactName: '',
+  //       email: '',
+  //       phone: '',
+  //       sponsorshipTier: '',
+  //       budgetRange: '',
+  //       interests: [],
+  //       message: ''
+  //     });
+  //     setSubmitStatus('idle');
+  //   }, 3000);
+  // };
 
   const handleInterestChange = (interest: string) => {
     setFormData(prev => ({
@@ -120,7 +120,7 @@ export const SponsorContactForm = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-8">
+              <form action="https://formsubmit.co/deakincompetitiverobotics@gmail.com" method="POST" className="space-y-8">
                 {/* Company and Contact Info */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -289,9 +289,7 @@ export const SponsorContactForm = () => {
                 Prefer to reach out directly?
               </h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-400">
-                <a href="mailto:sponsors@deakinrover.com" className="hover:text-purple-400 transition-colors">
-                  sponsors@deakinrover.com
-                </a>
+                DM us on <a href="https://instagram.com/deakinroverteam" className="hover:text-purple-400 text-blue-400 transition-colors">Instagram</a>
                 <span className="hidden sm:inline">•</span>
                 <span>Response within 24 hours</span>
               </div>
