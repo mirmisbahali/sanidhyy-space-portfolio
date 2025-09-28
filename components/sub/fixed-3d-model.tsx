@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { Model } from "@/components/main/3DEarth";
+import { OrbitControls, Stage } from "@react-three/drei";
+// import { Model } from "@/components/main/3DEarth";
+import { Model } from "@/components/main/Rover2025";
+import { Suspense, useRef } from "react";
 
 export const Fixed3DModel = () => {
   const [isVisible, setIsVisible] = useState(true);
-
+  const ref = useRef<any>();
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -43,14 +45,14 @@ export const Fixed3DModel = () => {
     <>
       {/* Desktop: Fixed 3D Model */}
       <motion.div
-        className="hidden lg:block fixed right-0 top-[100px] w-1/2 h-[calc(100vh-65px)] z-10 pointer-events-none"
+        className="hidden lg:block fixed right-0 top-[50px] w-1/2 h-[calc(100vh-65px)] z-10 pointer-events-none"
         initial={{ opacity: 1 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.1 }}
       >
         <div className="flex items-center justify-center h-full">
           <div className="w-[400px] h-[400px] xl:w-[480px] xl:h-[480px]">
-            <Canvas
+            {/* <Canvas
               camera={{ position: [0, 0, 1300], fov: 45 }}
               onCreated={({ gl }) => {
                 gl.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -58,13 +60,22 @@ export const Fixed3DModel = () => {
             >
               <OrbitControls
                 enableZoom={false}
-                autoRotate={true}
+                autoRotate={false}
                 autoRotateSpeed={0.5}
                 
               />
               <ambientLight intensity={3} />
-              <directionalLight position={[0, 0, 1300]} intensity={2} />
               <Model />
+            </Canvas> */}
+            <Canvas shadows dpr={[1, 2]} camera={{ fov: 15, position: [0, 0, 15] }}>
+              <Suspense fallback={null}>
+                <Stage controls={ref} preset="rembrandt" intensity={0.5} environment="city">
+                  false
+                  <Model />
+                  false
+                </Stage>
+              </Suspense>
+              <OrbitControls ref={ref} autoRotate />
             </Canvas>
           </div>
         </div>
