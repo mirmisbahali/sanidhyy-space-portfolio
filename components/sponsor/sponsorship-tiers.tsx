@@ -13,11 +13,9 @@ const sponsorshipTiers = [
     borderColor: "orange-500",
     popular: false,
     benefits: [
-      "Logo on team t-shirts and rover",
+      "Logo on team t-shirts",
       "Social media recognition",
-      "Thank you mention in presentations",
-      "Competition updates and photos",
-      "Team contact for networking"
+      "Mention on website"
     ]
   },
   {
@@ -29,12 +27,9 @@ const sponsorshipTiers = [
     borderColor: "gray-400",
     popular: false,
     benefits: [
-      "All Bronze benefits included",
-      "Prominent logo placement on rover",
-      "Featured in competition documentation",
-      "Invitation to team presentations",
-      "Access to technical reports",
-      "Partnership certificate"
+      "Logo on rover",
+      "Social media recognition",
+      "Mention on website"
     ]
   },
   {
@@ -46,13 +41,12 @@ const sponsorshipTiers = [
     borderColor: "yellow-400",
     popular: true,
     benefits: [
-      "All Silver benefits included",
-      "Large logo on rover chassis",
-      "Speaking opportunity at events",
-      "Quarterly progress meetings",
-      "Priority access to graduates",
-      "Custom partnership package",
-      "Media kit with high-res photos"
+      "All Bronze and Silver benefits",
+      "Logo on both T-shirt and rover",
+      "Access to technical documentation",
+      "Free invites to networking events",
+      "Mention on website and social media posts",
+      "Custom social media post if required*"
     ]
   },
 ];
@@ -79,7 +73,7 @@ export const SponsorshipTiers = () => {
         </motion.div>
 
         {/* Sponsorship Tiers Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {sponsorshipTiers.map((tier, index) => (
             <motion.div
               key={tier.id}

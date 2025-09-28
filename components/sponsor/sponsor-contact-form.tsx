@@ -20,20 +20,18 @@ export const SponsorContactForm = () => {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const sponsorshipTiers = [
-    'Bronze Partner ($500 - $1,999)',
-    'Silver Partner ($2,000 - $4,999)',
-    'Gold Partner ($5,000 - $9,999)',
-    'Platinum Partner ($10,000+)',
+    'Bronze Partner ($500)',
+    'Silver Partner ($1,000)',
+    'Gold Partner ($2,000+)',
     'Custom Package - Let\'s Discuss'
   ];
 
   const budgetRanges = [
-    'Under $1,000',
-    '$1,000 - $2,500',
-    '$2,500 - $5,000',
-    '$5,000 - $10,000',
-    '$10,000 - $25,000',
-    '$25,000+',
+    'Under $500',
+    '$500 - $1,000',
+    '$1,000 - $2,000',
+    '$2,000 - $5,000',
+    '$5,000+',
     'Prefer to discuss'
   ];
 

@@ -16,16 +16,6 @@ const roverFeatures = [
     id: "wheels",
     name: "Wheels",
     description: "Six-wheel rocker-bogie system providing superior traction and stability on uneven lunar surfaces."
-  },
-  {
-    id: "communication",
-    name: "Communication",
-    description: "High-gain antenna system for reliable data transmission and real-time control from ground stations."
-  },
-  {
-    id: "cameras",
-    name: "Cameras",
-    description: "Multi-spectral imaging system with panoramic and microscopic capabilities for scientific analysis."
   }
 ];
 

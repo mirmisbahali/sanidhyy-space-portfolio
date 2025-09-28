@@ -287,7 +287,7 @@ export const FOOTER_DATA = [
       {
         name: "GitHub",
         icon: RxGithubLogo,
-        link: "https://github.com",
+        link: "https://github.com/deakinrover",
       },
       // {
       //   name: "Discord",
@@ -302,7 +302,7 @@ export const FOOTER_DATA = [
       {
         name: "Instagram",
         icon: RxInstagramLogo,
-        link: "https://instagram.com",
+        link: "https://instagram.com/deakinroverteam",
       },
       // {
       //   name: "Twitter",
@@ -312,7 +312,7 @@ export const FOOTER_DATA = [
       {
         name: "Linkedin",
         icon: RxLinkedinLogo,
-        link: "https://linkedin.com",
+        link: "linkedin.com/company/deakin-competitive-robotics/",
       },
     ],
   },

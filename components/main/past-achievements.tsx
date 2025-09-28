@@ -9,37 +9,37 @@ const achievements = {
       year: "2026",
       event: "Critical Design Review",
       score: "20",
-      description: "Submit comprehensive technical documentation and rover design plans"
+      description: ""
     },
     {
       year: "2026",
       event: "Systems Acceptance Review",
       score: "50",
-      description: "Demonstrate rover navigation and equipment system capabilities"
+      description: ""
     },
     {
       year: "2026",
       event: "Post-Landing",
       score: "80",
-      description: "Execute complex multi-stage rover operations autonomously"
+      description: ""
     },
     {
       year: "2026",
       event: "Space Resources",
       score: "25",
-      description: "Locate and collect space resource samples efficiently"
+      description: ""
     },
     {
       year: "2026",
       event: "Excavation and Construction",
       score: "70",
-      description: "Perform excavation tasks and basic construction operations"
+      description: ""
     },
     {
       year: "2026",
       event: "Mapping and Autonomous",
       score: "70",
-      description: "Create detailed terrain maps and navigate autonomously"
+      description: ""
     }
   ],
   // awards: [
