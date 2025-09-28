@@ -79,7 +79,7 @@ export const BudgetBreakdown = () => {
             Fund <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">Allocation</span>
           </h2>
           <p className="text-gray-400 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            Transparency is important to us. Here's exactly how your sponsorship contribution
+            Transparency is important to us. Here&apos;s exactly how your sponsorship contribution
             will be used to advance our mission and develop the rover.
           </p>
         </motion.div>
@@ -235,7 +235,7 @@ export const BudgetBreakdown = () => {
                 Every Dollar Makes a Difference
               </h3>
               <p className="text-gray-300 leading-relaxed mb-6 max-w-2xl mx-auto">
-                Whether you're interested in a full sponsorship package or supporting a specific budget category,
+                Whether you&apos;re interested in a full sponsorship package or supporting a specific budget category,
                 your contribution directly advances space robotics education and student innovation.
               </p>
               <a

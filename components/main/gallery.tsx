@@ -113,7 +113,7 @@ export const Gallery = () => {
             Our 2025 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">Journey</span>
           </h2>
           <p className="text-gray-400 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            From late-night workshop sessions to competition day. Here's how we
+            From late-night workshop sessions to competition day. Here&apos;s how we
             turned an ambitious dream into reality.
           </p>
         </motion.div>

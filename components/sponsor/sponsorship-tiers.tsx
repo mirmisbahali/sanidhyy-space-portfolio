@@ -67,7 +67,7 @@ export const SponsorshipTiers = () => {
             Sponsorship <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">Packages</span>
           </h2>
           <p className="text-gray-400 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            Choose the partnership level that aligns with your organization's goals and budget.
+            Choose the partnership level that aligns with your organization&apos;s goals and budget.
             Every contribution makes a meaningful impact on our mission.
           </p>
         </motion.div>
@@ -141,8 +141,8 @@ export const SponsorshipTiers = () => {
               Need a Custom Partnership?
             </h3>
             <p className="text-gray-300 leading-relaxed mb-4">
-              We're flexible and open to discussing custom sponsorship packages that align with your specific goals and requirements.
-              Whether it's equipment donations, technical expertise, or unique collaboration opportunities.
+              We&apos;re flexible and open to discussing custom sponsorship packages that align with your specific goals and requirements.
+              Whether it&apos;s equipment donations, technical expertise, or unique collaboration opportunities.
             </p>
             <a
               href="#contact-form"

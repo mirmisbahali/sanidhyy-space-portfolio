@@ -92,10 +92,10 @@ export const SponsorContactForm = () => {
           className="text-center mb-16 lg:mb-24"
         >
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-6">
-            Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">Connect</span>
+            Let&apos;s <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">Connect</span>
           </h2>
           <p className="text-gray-400 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            Ready to partner with us? Fill out the form below and we'll get back to you within 24 hours
+            Ready to partner with us? Fill out the form below and we&apos;ll get back to you within 24 hours
             to discuss how we can work together.
           </p>
         </motion.div>
@@ -115,7 +115,7 @@ export const SponsorContactForm = () => {
                 </div>
                 <h3 className="font-heading text-2xl text-white mb-4">Thank You!</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  Your sponsorship inquiry has been received. We'll get back to you within 24 hours
+                  Your sponsorship inquiry has been received. We&apos;ll get back to you within 24 hours
                   to discuss partnership opportunities.
                 </p>
               </div>
