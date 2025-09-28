@@ -55,14 +55,15 @@ export const HeroComponentTest = () => {
           >
             <motion.a
               className="py-3 px-6 button-primary text-center text-white cursor-pointer rounded-lg font-heading text-xs transition-all hover:scale-105"
+              href="/sponsor"
             >
               Support Our Mission
             </motion.a>
-            <motion.a
+            {/* <motion.a
               className="py-3 px-6 border border-purple-500 text-center text-purple-400 cursor-pointer rounded-lg font-heading text-xs transition-all hover:bg-purple-500 hover:text-white"
             >
               About The Project
-            </motion.a>
+            </motion.a> */}
           </motion.div>
         </motion.div>
 
