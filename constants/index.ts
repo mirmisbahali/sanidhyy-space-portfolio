@@ -8,12 +8,12 @@ export const SOCIALS = [
   {
     name: "Instagram",
     icon: RxInstagramLogo,
-    link: "https://instagram.com",
+    link: "https://instagram.com/deakinroverteam",
   },
   {
     name: "LinkedIn",
     icon: RxLinkedinLogo,
-    link: "https://linkedin.com",
+    link: "https://linkedin.com/company/deakin-competitive-robotics/",
   },
 ] as const;
 
