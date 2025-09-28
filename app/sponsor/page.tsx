@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { SponsorHero } from "@/components/sponsor/sponsor-hero";
 import { SponsorshipTiers } from "@/components/sponsor/sponsorship-tiers";
 import { SponsorImpact } from "@/components/sponsor/sponsor-impact";
-import { BudgetBreakdown } from "@/components/sponsor/budget-breakdown";
 import { SponsorContactForm } from "@/components/sponsor/sponsor-contact-form";
 
 export const metadata: Metadata = {

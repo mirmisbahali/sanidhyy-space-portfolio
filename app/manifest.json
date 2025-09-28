@@ -1,0 +1,38 @@
+{
+  "name": "Deakin Rover Team - Lunar Exploration & Space Robotics",
+  "short_name": "Deakin Rover",
+  "description": "Deakin University's student-led rover team competing in the Australian Rover Challenge",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030014",
+  "theme_color": "#030014",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon1.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon2.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["education", "technology", "science"],
+  "lang": "en-AU",
+  "scope": "/",
+  "id": "deakin-rover-team"
+}

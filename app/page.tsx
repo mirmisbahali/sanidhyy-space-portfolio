@@ -1,7 +1,4 @@
-import { Encryption } from "@/components/main/encryption";
 import { Hero } from "@/components/main/hero";
-import { Projects } from "@/components/main/projects";
-import { Skills } from "@/components/main/skills";
 import { RoverTechnologySection } from "@/components/main/rover-technology";
 import { PastAchievements } from "@/components/main/past-achievements";
 import { Sponsors } from "@/components/main/sponsors";
