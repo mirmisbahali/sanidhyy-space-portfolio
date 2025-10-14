@@ -20,7 +20,7 @@ const galleryPhotos = [
   },
   {
     id: 2,
-    src: "/gallery/2.jpg",
+    src: "/gallery/2.webp",
     alt: "Deakin Rover Team 2025"
   },
   {
