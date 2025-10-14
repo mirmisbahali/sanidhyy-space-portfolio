@@ -25,62 +25,62 @@ const galleryPhotos = [
   },
   {
     id: 3,
-    src: "/gallery/3.jpg",
+    src: "/gallery/3.webp",
     alt: "Deakin Competitive Robotics Banner"
   },
   {
     id: 4,
-    src: "/gallery/4.jpg",
+    src: "/gallery/4.webp",
     alt: "Misbah's Badge"
   },
   {
     id: 5,
-    src: "/gallery/5.jpg",
+    src: "/gallery/5.webp",
     alt: "Deakin Rover Team in the base station during space resources task"
   },
   {
     id: 6,
-    src: "/gallery/6.jpg",
+    src: "/gallery/6.webp",
     alt: "Jatan and Nguyen working on the rover"
   },
   {
     id: 7,
-    src: "/gallery/7.jpg",
+    src: "/gallery/7.webp",
     alt: "Practice session a day before post-landing task"
   },
   {
     id: 8,
-    src: "/gallery/8.jpg",
+    src: "/gallery/8.webp",
     alt: "Award Ceremony at the Australian Rover Challenge 2025"
   },
   {
     id: 9,
-    src: "/gallery/9.png",
+    src: "/gallery/9.webp",
     alt: "Aurora Rover at the Australian Rover Challenge 2025"
   },
   {
     id: 10,
-    src: "/gallery/10.jpg",
+    src: "/gallery/10.webp",
     alt: "Team working on the rover"
   },
   {
     id: 11,
-    src: "/gallery/11.jpg",
+    src: "/gallery/11.webp",
     alt: "Bon and Jatan on field during the space resources task"
   },
   {
     id: 12,
-    src: "/gallery/12.jpg",
+    src: "/gallery/12.webp",
     alt: "Deakin Rover Team discussing strategy in the base station"
   },
   {
     id: 13,
-    src: "/gallery/13.jpg",
+    src: "/gallery/13.webp",
     alt: "Group photo of all the teams at the Australian Rover Challenge 2025"
   },
   {
     id: 14,
-    src: "/gallery/14.jpg",
+    src: "/gallery/14.webp",
     alt: "Group photo of Deakin Rover Team 2025"
   },
 ];

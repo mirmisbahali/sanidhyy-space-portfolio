@@ -60,7 +60,7 @@ export const LogoSection = () => {
           >
             <div className="rounded-lg">
               <Image
-                src="/dcr.png"
+                src="/DCR.webp"
                 alt="Deakin Competitive Robotics Logo"
                 width={100}
                 height={50}
